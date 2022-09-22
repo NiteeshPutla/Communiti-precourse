@@ -1,0 +1,5 @@
+Learned about symmetric encryption and assymetric encryption
+
+Bitcoin uses ECDSA(elliptic curve digital signature algorithm) to generate publickey and private key pairs
+
+oneway function y=f(x) we cant calcuate x when y is known but can calculate y when x is known.
