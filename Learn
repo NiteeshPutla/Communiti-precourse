@@ -1,0 +1,15 @@
+How to cancel a transaction?
+
+A:By replacing it with a self 0 ether transfer with the same nonce and higher gas(it only works only when the transaction is not included in the blockchain).
+
+
+what are upgradable contracts?
+A smart contract upgrade involves changing the business logic of a smart contract while preserving the contract's state.
+
+
+
+
+what are flashbots?
+
+
+Make a staking contract to stake eth and get rewards in usdc?
