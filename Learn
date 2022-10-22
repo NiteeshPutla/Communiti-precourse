@@ -6,10 +6,24 @@ A:By replacing it with a self 0 ether transfer with the same nonce and higher ga
 what are upgradable contracts?
 A smart contract upgrade involves changing the business logic of a smart contract while preserving the contract's state.
 
+What is a replay attack?
+Replay attack is a fabrication attack where adversary resends already sent messages .
+
+How to prevent replay attack?
+1) a nonce that keeps track of how many transactions have been sent from the account. The rule is that miners will only execute transactions
+from an account if the nonce is larger in value than a previous nonce. And only if it increments the largest seen nonce from that account by 1.
+So it won't run a transaction if the new transaction nonce is 20 and the largest seen nonce from the miner of that account is 14. 
+It needs to see 19 first, and recursively, 19 only runs when 18 has been run, and so on.
+
+2) The second piece of information is the chain ID. If we don't specify the chain ID, then someone sending a transaction on the Ethereum mainnet-even
+if the nonce is fine-can have their transaction re-sent on other chains.
+
 
 
 
 what are flashbots?
+Flashbots is a research and development organization working on mitigating the negative externalities of Maximal Extractable Value (MEV) extraction 
+techniques and avoiding the existential risks MEV could cause to stateful blockchains like Ethereum.
 
 
 Make a staking contract to stake eth and get rewards in usdc?
