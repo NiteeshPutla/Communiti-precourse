@@ -1,0 +1,26 @@
+Function Modifiers
+Modifiers are code that can be run before and/or after a function call.
+can be denoted by the modifier keyword
+
+Modifiers can be used to:
+
+  1) Restrict access
+  2) Validate inputs
+  3) Guard against reentrancy hack
+
+
+
+Events
+With Solidity Events, you can push data for the outside consumer from the blockchain, such as Web Frontend or Mobile Apps
+Example: If we are building a decentralized exchange and if someone trade any token they can be notified in real-time through this event
+So event handling is the two-step process
+You need to declare the event at the smart contract level
+The event can not be read from inside the Smart contract anyhow even in the future (Like way communication from the outside world)
+Gas cost is lower than storage variable so you can take advantage of events in some places if you don’t need to persist data.
+
+When we emit the events the listener who is actually listing for this event on the frontend application will receive an update.
+
+Indexed
+The indexed keyword is basically used to create an index so basically suppose you want to filter out any specifics events then you can index that parameter
+Adding an index will increase the gas cost because now Ethereum need to save the indexed data
+A maximum of three indexed are allowed in a single event
