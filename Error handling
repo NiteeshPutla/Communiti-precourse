@@ -1,0 +1,25 @@
+Use require()to:
+
+Validate user inputs ie. require(input<20);
+Validate the response from an external contract ie. require(external.send(amount));
+Validate state conditions prior to execution, ie. require(block.number > SOME_BLOCK_NUMBER) or require(balance[msg.sender]>=amount)
+Generally, you should use require most often
+Generally, it will be used towards the beginning of a function
+There are many examples of require() in use for such things in our Smart Contract Best Practices.
+
+Use revert()to:
+
+Handle the same type of situations as require(), but with more complex logic.
+If you have some complex nested if/else logic flow, you may find that it makes sense to use revert() instead of require(). Keep in mind though, complex logic is a code smell.
+
+Use assert() to:
+
+Check for overflow/underflow, ie. c = a+b; assert(c > b)
+Check invariants, ie. assert(this.balance >= totalSupply);
+Validate state after making changes
+Prevent conditions which should never, ever be possible
+Generally, you will probably use assert less often
+Generally, it will be used towards the end of a function.
+Basically, require() should be your go to function for checking conditions, assert() is just there to prevent anything really bad from happening, but it shouldn’t be possible for the condition to evaluate to false.
+
+Also: “you should not use assert blindly for overflow checking but only if you think that previous checks (either using ifor require) would make an overflow impossible”. 
